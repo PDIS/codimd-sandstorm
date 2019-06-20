@@ -41,3 +41,19 @@ EOF
 ## NODE package
 npm install -g node-gyp sequelize-cli
 
+# Mount directories avoiding sync with outside Virtualbox
+mkdir -p /var/codimd_node_modules
+mkdir -p /var/codimd_public_build
+mkdir -p /var/codimd_public_views_build
+mkdir -p /opt/app/node_modules
+mkdir -p /opt/app/public/build
+mkdir -p /opt/app/public/views/build
+mount --bind /var/codimd_node_modules /opt/app/node_modules
+mount --bind /var/codimd_public_build /opt/app/public/build
+mount --bind /var/codimd_public_views_build /opt/app/public/views/build
+echo 'mount --bind /var/codimd_node_modules /opt/app/node_modules' >> ~/.bashrc
+echo 'mount --bind /var/codimd_public_build /opt/app/public/build' >> ~/.bashrc
+echo 'mount --bind /var/codimd_public_views_build /opt/app/public/views/build'  >> ~/.bashrc
+chown vagrant /opt/app/node_modules
+chown vagrant /opt/app/public/build
+chown vagrant /opt/app/public/views/build
