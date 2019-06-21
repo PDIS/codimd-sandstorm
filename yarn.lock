@@ -9919,17 +9919,10 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
-winston-transport@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.npmjs.org/winston-transport/-/winston-transport-4.3.0.tgz#df68c0c202482c448d9b47313c07304c2d7c2c66"
-  integrity sha512-B2wPuwUi3vhzn/51Uukcao4dIduEiPOcOt9HJ3QeaXgkJ5Z7UwpBzxS4ZGNHtrxrUvTwemsQiSys0ihOf8Mp1A==
-  dependencies:
-    readable-stream "^2.3.6"
-    triple-beam "^1.2.0"
-
-"winston@https://gitlab.com/sandstorm-bingluen/winston.git#patch4sandstorm":
+winston-sandstorm@~3.2.1:
   version "3.2.1"
-  resolved "https://gitlab.com/sandstorm-bingluen/winston.git#c1e0497707e97885910ed36a3b11fcfdd86fc75f"
+  resolved "https://registry.npmjs.org/winston-sandstorm/-/winston-sandstorm-3.2.1.tgz#2d175be34cb209ba02574119dc3132863ea4718d"
+  integrity sha512-rbM9eMYGy1j0Y8kWn1oa97KZ5tlE1hxfhwDIl9Nej2+OA0n63E7NkfO9c3yKM9QqDXUYuMABkPaikVpWIVDMEQ==
   dependencies:
     async "^2.6.1"
     diagnostics "^1.1.1"
@@ -9940,6 +9933,14 @@ winston-transport@^4.3.0:
     stack-trace "0.0.x"
     triple-beam "^1.3.0"
     winston-transport "^4.3.0"
+
+winston-transport@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/winston-transport/-/winston-transport-4.3.0.tgz#df68c0c202482c448d9b47313c07304c2d7c2c66"
+  integrity sha512-B2wPuwUi3vhzn/51Uukcao4dIduEiPOcOt9HJ3QeaXgkJ5Z7UwpBzxS4ZGNHtrxrUvTwemsQiSys0ihOf8Mp1A==
+  dependencies:
+    readable-stream "^2.3.6"
+    triple-beam "^1.2.0"
 
 wkx@^0.4.6:
   version "0.4.7"
