@@ -41,6 +41,9 @@ EOF
 ## NODE package
 npm install -g node-gyp sequelize-cli
 
+# Install library which needed by node package
+apt-get install -y g++ libssl-dev
+
 # Mount directories avoiding sync with outside Virtualbox
 mkdir -p /var/codimd_node_modules
 mkdir -p /var/codimd_public_build
