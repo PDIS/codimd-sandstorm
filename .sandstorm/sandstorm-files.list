@@ -2074,6 +2074,7 @@ opt/app/public/build/MathJax/MathJax.js
 opt/app/public/build/MathJax/config/Safe.js
 opt/app/public/build/MathJax/config/TeX-AMS-MML_HTMLorMML.js
 opt/app/public/build/MathJax/extensions/Safe.js
+opt/app/public/build/common.5af01512bb50474e2b58.js
 opt/app/public/build/common.df24f82ae74d26077b43.js
 opt/app/public/build/cover-pack.dbfa3bff5765ac50ecf6.js
 opt/app/public/build/cover-styles-pack.css
@@ -2086,6 +2087,7 @@ opt/app/public/build/index-styles-pack.css
 opt/app/public/build/index-styles.css
 opt/app/public/build/index.css
 opt/app/public/default.md
+opt/app/public/fonts/SourceCodePro-Medium.woff
 opt/app/public/fonts/SourceCodePro-Regular.woff
 opt/app/public/fonts/SourceSansPro-Italic.woff
 opt/app/public/fonts/SourceSansPro-Light.woff
