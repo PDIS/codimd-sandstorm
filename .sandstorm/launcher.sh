@@ -39,4 +39,5 @@ export CMD_DOMAIN=$ROOT_URL
 export CMD_USECDN=false
 export CMD_LOG_LEVEL=debug
 export CMD_PROTOCOL_USESSL=false
+export CMD_SINGLE_NOTE=true
 node app.js
