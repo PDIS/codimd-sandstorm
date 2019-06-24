@@ -17,11 +17,12 @@ More info: https://github.com/hackmdio/codimd
 - Single note per grain
     - If logged on sandstorm, auto login into CodiMD and find or create note then redirect to show it.
     - Otherwise, show note if note is exists or redirect 404 not found page
+    - Remove `New` button
     To disable single note per grain(i.e. behavior as CodiMD default), remove following line on `luncher.sh`
     ```
     export CMD_SINGLE_NOTE=true
     ```
-
+- Remove `Publish` button
 
 ## License
 
