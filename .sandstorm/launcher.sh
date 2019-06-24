@@ -25,7 +25,7 @@ while [ ! -e /var/run/mysqld/mysqld.sock ] ; do
 done
 
 # Create database & user
-echo "CREATE DATABASE IF NOT EXISTS app; CREATE USER IF NOT EXISTS 'app'@'127.0.0.1' IDENTIFIED BY '20976d20aa2059a6e087773da9f41f07'; GRANT ALL ON `database`.* TO 'app'@'127.0.0.1'" | mysql -uroot
+echo "CREATE DATABASE /*!32312 IF NOT EXISTS*/ app /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */; CREATE USER IF NOT EXISTS 'app'@'127.0.0.1' IDENTIFIED BY '20976d20aa2059a6e087773da9f41f07'; GRANT ALL ON `database`.* TO 'app'@'127.0.0.1'" | mysql -uroot
 
 cd /opt/app
 
