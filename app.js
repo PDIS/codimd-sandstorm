@@ -153,8 +153,11 @@ server.on('resumeSession', function (id, cb) {
   cb(null, tlsSessionStore[id.toString('hex')] || null)
 })
 
+/* FIXME: Temporarily remove `tooBusy`.
+ *    To prevent show `I'm busy right now, try again later.` at app launcher
+ */
 // middleware which blocks requests when we're too busy
-app.use(require('./lib/web/middleware/tooBusy'))
+// app.use(require('./lib/web/middleware/tooBusy'))
 
 app.use(flash())
 
