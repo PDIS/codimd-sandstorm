@@ -10,7 +10,7 @@ More info: https://github.com/hackmdio/codimd
 ## Something different between CodiMD-Sandstorm and CodiMD
 
 - Using `winston-sandstorm` replace `winston` as an dependency
-Because `process.memoryUsage()` can't be executed on sandstorm. We fork `winston` package, remove usage of `process.memoryUsage()` and pack an new package  `winston-sandstorm`, upload to npm
+    Because `process.memoryUsage()` can't be executed on sandstorm. We fork `winston` package, remove usage of `process.memoryUsage()` and pack an new package  `winston-sandstorm` upload to npm
 - Link of image upload (which upload to filesystem) will be relative path instead of uri
 - Using `multer` replace `formidable`
     Prevent randomly failure of image upload

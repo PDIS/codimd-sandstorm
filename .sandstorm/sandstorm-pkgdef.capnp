@@ -19,7 +19,7 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "CodiMD"),
 
-    appVersion = 0,  # Increment this for every release.
+    appVersion = 1,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "0.0.1"),
     # Human-readable representation of appVersion. Should match the way you
@@ -48,16 +48,17 @@ const pkgdef :Spk.PackageDefinition = (
       # https://github.com/sandstorm-io/sandstorm/blob/master/src/sandstorm/package.capnp
       icons = (
         # Various icons to represent the app in various contexts.
-        #appGrid = (svg = embed "path/to/appgrid-128x128.svg"),
-        #grain = (svg = embed "path/to/grain-24x24.svg"),
-        #market = (svg = embed "path/to/market-150x150.svg"),
-        #marketBig = (svg = embed "path/to/market-big-300x300.svg"),
+        appGrid = (png = (dpi1x = embed "asset/appgrid-128x128.png")),
+        grain = (png = (dpi1x = embed "asset/grain-24x24.png",
+                        dpi2x = embed "asset/grain-48x48.png")),
+        market = (png = (dpi1x = embed "asset/market-150x150.png")),
+        marketBig = (png = (dpi1x = embed "asset/market-big-300x300.png")),
       ),
 
-      website = "https://github.com/PDIS/sandmd2",
+      website = "https://github.com/PDIS/codimd-sandstorm",
       # This should be the app's main website url.
 
-      codeUrl = "https://github.com/PDIS/sandmd2",
+      codeUrl = "https://github.com/PDIS/codimd-sandstorm",
       # URL of the app's source code repository, e.g. a GitHub URL.
       # Required if you specify a license requiring redistributing code, but optional otherwise.
 
@@ -78,7 +79,7 @@ const pkgdef :Spk.PackageDefinition = (
         # requests as well as app store administrator requests, so it is very important that this be a
         # valid address with someone paying attention to it.
 
-        #pgpSignature = embed "path/to/pgp-signature",
+        pgpSignature = embed "pgp-signature",
         # PGP signature attesting responsibility for the app ID. This is a binary-format detached
         # signature of the following ASCII message (not including the quotes, no newlines, and
         # replacing <app-id> with the standard base-32 text format of the app's ID):
@@ -99,7 +100,7 @@ const pkgdef :Spk.PackageDefinition = (
         # Remove this line if you consider yourself as the author of the app.
       ),
 
-      #pgpKeyring = embed "path/to/pgp-keyring",
+      pgpKeyring = embed "pgp-keyring",
       # A keyring in GPG keyring format containing all public keys needed to verify PGP signatures in
       # this manifest (as of this writing, there is only one: `author.pgpSignature`).
       #
@@ -109,7 +110,7 @@ const pkgdef :Spk.PackageDefinition = (
       #
       # Where `<key-id>` is a PGP key ID or email address associated with the key.
 
-      #description = (defaultText = embed "path/to/description.md"),
+      description = (defaultText = embed "asset/description.md"),
       # The app's description in Github-flavored Markdown format, to be displayed e.g.
       # in an app store. Note that the Markdown is not permitted to contain HTML nor image tags (but
       # you can include a list of screenshots separately).
@@ -124,10 +125,10 @@ const pkgdef :Spk.PackageDefinition = (
         # Sizes are given in device-independent pixels, so if you took these
         # screenshots on a Retina-style high DPI screen, divide each dimension by two.
 
-        #(width = 746, height = 795, jpeg = embed "path/to/screenshot-1.jpeg"),
+        (width = 2870, height = 1584, png = embed "asset/screenshot-1.png"),
         #(width = 640, height = 480, png = embed "path/to/screenshot-2.png"),
       ],
-      #changeLog = (defaultText = embed "path/to/sandstorm-specific/changelog.md"),
+      changeLog = (defaultText = embed "asset/changelog.md"),
       # Documents the history of changes in Github-flavored markdown format (with the same restrictions
       # as govern `description`). We recommend formatting this with an H1 heading for each version
       # followed by a bullet list of changes.
@@ -156,7 +157,7 @@ const pkgdef :Spk.PackageDefinition = (
   # `spk dev` will write a list of all the files your app uses to this file.
   # You should review it later, before shipping your app.
 
-  alwaysInclude = ["nodu_modules"],
+  alwaysInclude = [],
   # Fill this list with more names of files or directories that should be
   # included in your package, even if not listed in sandstorm-files.list.
   # Use this to force-include stuff that you know you need but which may
