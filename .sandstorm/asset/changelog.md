@@ -1,3 +1,9 @@
+# 0.0.3
+
+- Fix bug case by file not be list in file list
+  - Emoji missing
+  - MathJax not working
+
 # 0.0.2
 
 - Remove `Publish` button
