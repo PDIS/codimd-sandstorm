@@ -40,6 +40,7 @@
     "Extra": "추가",
     "Revision": "기록",
     "Slide Mode": "슬라이드 모드",
+    "Print Mode": "인쇄 모드",
     "Export": "내보내기",
     "Import": "들여오기",
     "Clipboard": "클립보드",
@@ -113,5 +114,7 @@
     "Delete user": "Delete user",
     "Export user data": "Export user data",
     "Help us translating on %s": "%s에서 번역으로 저희를 도와주세요",
-    "Source Code": "Source Code"
+    "Source Code": "Source Code",
+    "Powered by %s": "Powered by %s",
+    "Register": "Register"
 }

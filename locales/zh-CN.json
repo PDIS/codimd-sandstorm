@@ -40,6 +40,7 @@
     "Extra": "增益",
     "Revision": "修订版本",
     "Slide Mode": "简报模式",
+    "Print Mode": "打印模式",
     "Export": "导出",
     "Import": "导入",
     "Clipboard": "剪贴板",
@@ -113,5 +114,7 @@
     "Delete user": "删除帐户",
     "Export user data": "汇出使用者资料",
     "Help us translating on %s": "来 %s 帮我们翻译",
-    "Source Code": "源码"
+    "Source Code": "源码",
+    "Powered by %s": "Powered by %s",
+    "Register": "Register"
 }

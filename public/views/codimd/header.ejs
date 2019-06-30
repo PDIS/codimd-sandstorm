@@ -22,7 +22,7 @@
                 <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu list" role="menu" aria-labelledby="menu">
-                <% if (!process.env.CMD_SINGLE_NOTE) { %>
+                <% if (process.env.CMD_SINGLE_NOTE !== 'true') { %>
                 <li role="presentation"><a role="menuitem" class="ui-new" tabindex="-1" href="<%- serverURL %>/new" target="_blank" rel="noopener"><i class="fa fa-plus fa-fw"></i> <%= __('New') %></a>
                 </li>
                 <% } %>
@@ -31,6 +31,8 @@
                 <li role="presentation"><a role="menuitem" class="ui-extra-revision" tabindex="-1" data-toggle="modal" data-target="#revisionModal"><i class="fa fa-history fa-fw"></i> <%= __('Revision') %></a>
                 </li>
                 <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="#" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> <%= __('Slide Mode') %></a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="?view" target="_blank" rel="noopener"><i class="fa fa-print fa-fw"></i> <%= __('Print Mode') %></a>
                 </li>
                 <% if(enableGitHubGist || enableDropBoxSave || enableGitlabSnippets) { %>
                 <li class="divider"></li>
@@ -58,6 +60,7 @@
                 <% } %>
                 <li role="presentation"><a role="menuitem" class="ui-import-clipboard" href="#" data-toggle="modal" data-target="#clipboardModal"><i class="fa fa-clipboard fa-fw"></i> <%= __('Clipboard') %></a>
                 </li>
+                <% if (process.env.CMD_DISABLE_EXPORT !== 'true') { %>
                 <li class="divider"></li>
                 <li class="dropdown-header"><%= __('Download') %></li>
                 <li role="presentation"><a role="menuitem" class="ui-download-markdown" tabindex="-1" href="#" target="_self"><i class="fa fa-file-text fa-fw"></i> Markdown</a>
@@ -70,9 +73,11 @@
                   <li role="presentation"><a role="menuitem" class="ui-download-pdf-beta" tabindex="-1" href="#" target="_self"><i class="fa fa-file-pdf-o fa-fw"></i> PDF (Beta)</a>
                   </li>
                 <% } %>
+                <% } %>
                 <li class="divider"></li>
                 <li role="presentation"><a role="menuitem" class="ui-help" href="#" data-toggle="modal" data-target=".help-modal"><i class="fa fa-question-circle fa-fw"></i> Help</a>
                 </li>
+
             </ul>
             <a class="btn btn-link ui-mode">
                 <i class="fa fa-pencil"></i>
@@ -114,7 +119,7 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right" style="padding:0;">
-            <% if (!process.env.CMD_SINGLE_NOTE) { %>
+            <% if (process.env.CMD_SINGLE_NOTE !== 'true') { %>
             <li>
                 <a href="<%- serverURL %>/new" target="_blank" rel="noopener" class="ui-new">
                     <i class="fa fa-plus"></i> <%= __('New') %>
@@ -130,6 +135,8 @@
                     <li role="presentation"><a role="menuitem" class="ui-extra-revision" tabindex="-1" data-toggle="modal" data-target="#revisionModal"><i class="fa fa-history fa-fw"></i> <%= __('Revision') %></a>
                     </li>
                     <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="#" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> <%= __('Slide Mode') %></a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="?view" target="_blank" rel="noopener"><i class="fa fa-print fa-fw"></i> <%= __('Print Mode') %></a>
                     </li>
                     <% if(enableGitHubGist || enableDropBoxSave || enableGitlabSnippets) { %>
                     <li class="divider"></li>
@@ -157,6 +164,7 @@
                     <% } %>
                     <li role="presentation"><a role="menuitem" class="ui-import-clipboard" href="#" data-toggle="modal" data-target="#clipboardModal"><i class="fa fa-clipboard fa-fw"></i> <%= __('Clipboard') %></a>
                     </li>
+                    <% if (process.env.CMD_DISABLE_EXPORT !== 'true') { %>
                     <li class="divider"></li>
                     <li class="dropdown-header"><%= __('Download') %></li>
                     <li role="presentation"><a role="menuitem" class="ui-download-markdown" tabindex="-1" href="#" target="_self"><i class="fa fa-file-text fa-fw"></i> Markdown</a>
@@ -168,6 +176,7 @@
                     <% if(typeof allowPDFExport !== 'undefined' && allowPDFExport) {%>
                       <li role="presentation"><a role="menuitem" class="ui-download-pdf-beta" tabindex="-1" href="#" target="_self"><i class="fa fa-file-pdf-o fa-fw"></i> PDF (Beta)</a>
                       </li>
+                    <% } %>
                     <% } %>
                 </ul>
             </li>

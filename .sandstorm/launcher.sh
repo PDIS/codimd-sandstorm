@@ -34,10 +34,10 @@ sequelize db:migrate
 
 # Run app
 export NODE_ENV=production
-export CMD_ALLOW_ORIGIN=*.local.sandstorm.io
 export CMD_DOMAIN=$ROOT_URL
 export CMD_USECDN=false
 export CMD_LOG_LEVEL=debug
 export CMD_PROTOCOL_USESSL=false
 export CMD_SINGLE_NOTE=true
+export CMD_DISABLE_EXPORT=true
 node app.js
