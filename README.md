@@ -23,6 +23,13 @@ More info: https://github.com/hackmdio/codimd
     export CMD_SINGLE_NOTE=true
     ```
 - Remove `Publish` button
+- Default permission are `freely`
+    To using CodiMD default value `editable`, remove following line on `luncher.sh` and rebuild it
+    ```
+    export CMD_DEFAULT_PERMISSION=freely
+    ```
+- Hidden export on menu
+- Add print mode
 
 ## License
 

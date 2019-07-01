@@ -1,3 +1,8 @@
+# 0.0.4
+- Hidden export list
+- Add print mode
+  Open new window and pop up print dialog of browser
+
 # 0.0.3
 
 - Fix bug case by file not be list in file list
