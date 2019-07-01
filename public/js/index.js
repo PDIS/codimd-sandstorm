@@ -798,6 +798,11 @@ function changeMode (type) {
       ui.area.view.addClass(scrollClass)
       ui.area.view.show()
       break
+    case modeType.print:
+      ui.area.edit.hide()
+      ui.area.view.show()
+      window.print()
+      break
   }
   // save mode to url
   if (history.replaceState && window.loaded) history.replaceState(null, '', serverurl + '/' + noteid + '?' + appState.currentMode.name)

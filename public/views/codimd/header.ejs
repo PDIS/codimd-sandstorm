@@ -25,14 +25,14 @@
                 <% if (process.env.CMD_SINGLE_NOTE !== 'true') { %>
                 <li role="presentation"><a role="menuitem" class="ui-new" tabindex="-1" href="<%- serverURL %>/new" target="_blank" rel="noopener"><i class="fa fa-plus fa-fw"></i> <%= __('New') %></a>
                 </li>
-                <% } %>
                 <li class="divider"></li>
+                <% } %>
                 <li class="dropdown-header"><%= __('Extra') %></li>
                 <li role="presentation"><a role="menuitem" class="ui-extra-revision" tabindex="-1" data-toggle="modal" data-target="#revisionModal"><i class="fa fa-history fa-fw"></i> <%= __('Revision') %></a>
                 </li>
                 <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="#" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> <%= __('Slide Mode') %></a>
                 </li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="?view" target="_blank" rel="noopener"><i class="fa fa-print fa-fw"></i> <%= __('Print Mode') %></a>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="?print" target="_blank" rel="noopener"><i class="fa fa-print fa-fw"></i> <%= __('Print Mode') %></a>
                 </li>
                 <% if(enableGitHubGist || enableDropBoxSave || enableGitlabSnippets) { %>
                 <li class="divider"></li>
@@ -136,7 +136,7 @@
                     </li>
                     <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="#" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> <%= __('Slide Mode') %></a>
                     </li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="?view" target="_blank" rel="noopener"><i class="fa fa-print fa-fw"></i> <%= __('Print Mode') %></a>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="?print" target="_blank" rel="noopener"><i class="fa fa-print fa-fw"></i> <%= __('Print Mode') %></a>
                     </li>
                     <% if(enableGitHubGist || enableDropBoxSave || enableGitlabSnippets) { %>
                     <li class="divider"></li>
