@@ -2,6 +2,7 @@
 - Hidden export list
 - Add print mode
   Open new window and pop up print dialog of browser
+- Workaround: add `zh-tw` on i18n list for safari
 
 # 0.0.3
 
