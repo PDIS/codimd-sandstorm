@@ -40,4 +40,5 @@ export CMD_LOG_LEVEL=debug
 export CMD_PROTOCOL_USESSL=false
 export CMD_SINGLE_NOTE=true
 export CMD_DISABLE_EXPORT=true
+export CMD_DEFAULT_PERMISSION=freely
 node app.js
