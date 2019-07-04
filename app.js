@@ -123,6 +123,23 @@ app.use(cookieParser())
 
 app.use(i18n.init)
 
+app.use(function (req, res, next) {
+  const ieRegex = [
+    /Trident\/7\.0.*rv\:([0-9\.]+)\).*Gecko$/,
+    /MSIE\s([0-9\.]+);.*Trident\/[4-7].0/,
+    /MSIE\s(7\.0)/
+  ]
+  const userAgent = req.header('user-agent')
+
+  const isIE = ieRegex.reduce((pv, cv) => (pv || cv.test(userAgent)), false)
+
+  if (isIE) {
+    res.render('ieNotSupported.ejs')
+  } else {
+    next()
+  }
+})
+
 // routes without sessions
 // static files
 app.use('/', express.static(path.join(__dirname, '/public'), { maxAge: config.staticCacheTime, index: false }))

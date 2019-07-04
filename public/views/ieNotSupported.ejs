@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE is not supported</title>
+    <style>
+        /* For dev / testing only */
+        .site-body {
+        background: #ececec;
+        min-height: 1500px;
+        }
+        .site-body img {
+        position: relative;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        left: 50%;
+        max-width: 1500px;
+        }
+
+        /* Browser Warning Message */
+        .outdated-browser-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #e64b4b;
+        padding: 1rem;
+        text-align: center;
+        box-sizing: border-box;
+        z-index: 99999;
+        }
+        .outdated-browser-container .outdated-message .message-title, .outdated-browser-container .outdated-message .message-description {
+        margin: .75rem 0;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: .05rem;
+        }
+        .outdated-browser-container .outdated-message .message-title {
+        font-weight: 700;
+        }
+        .outdated-browser-container .outdated-message .message-description {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        }
+        .outdated-browser-container .outdated-browsers {
+        display: flex;
+        flex-flow: row wrap;
+        width: calc(100% + 2rem);
+        margin: 2rem -1rem -1rem;
+        }
+        @media (min-width: 990px) {
+        .outdated-browser-container .outdated-browsers {
+            height: 100%;
+            flex-flow: row nowrap;
+        }
+        }
+        .outdated-browser-container .outdated-browsers.hide {
+        display: none;
+        }
+        .outdated-browser-container .outdated-browsers .browser {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        }
+        @media (min-width: 990px) {
+        .outdated-browser-container .outdated-browsers .browser {
+            height: 100%;
+        }
+        }
+        .outdated-browser-container .outdated-browsers .browser.hide {
+        display: none;
+        }
+        .outdated-browser-container .outdated-browsers .browser.chrome {
+        background: #f2b635;
+        }
+        .outdated-browser-container .outdated-browsers .browser.ff {
+        background: #f19a2a;
+        }
+        .outdated-browser-container .outdated-browsers .browser.edge, .outdated-browser-container .outdated-browsers .browser.android-edge {
+        background: #00caff;
+        }
+        .outdated-browser-container .outdated-browsers .browser.safari, .outdated-browser-container .outdated-browsers .browser.ios {
+        background: #00a0e6;
+        }
+        .outdated-browser-container .outdated-browsers .browser .cta-primary {
+        display: block;
+        text-align: center;
+        margin: 1.25rem auto;
+        padding: .75rem 1rem;
+        max-width: 12rem;
+        }
+        @media (min-width: 990px) {
+        .outdated-browser-container .outdated-browsers .browser .cta-primary {
+            margin: 2.5rem auto 1rem;
+        }
+        }
+        .outdated-browser-container .outdated-browsers .browser h3 {
+        text-align: center;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        margin-top: 1rem;
+        }
+        @media (max-width: 990px) {
+        .outdated-browser-container .cta-group {
+            margin: 2rem 0 1rem;
+        }
+        }
+        @media (min-width: 990px) {
+        .outdated-browser-container .cta-group {
+            position: absolute;
+            right: 3.7rem;
+            top: 2.7rem;
+        }
+        }
+        .outdated-browser-container .cta-primary, .outdated-browser-container .cta-secondary {
+        border: 4px solid white;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        letter-spacing: .05rem;
+        font-family: 'Montserrat', sans-serif;
+        transition: .5s all;
+        }
+        .outdated-browser-container .cta-primary:hover, .outdated-browser-container .cta-secondary:hover {
+        background: white;
+        color: black;
+        }
+        .outdated-browser-container .cta-primary {
+        border-radius: 10rem;
+        padding: .5rem 1rem;
+        }
+        .outdated-browser-container .cta-secondary {
+        border-color: transparent;
+        border-radius: 50rem;
+        padding: .5rem .75rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outdated-browser-container js-outdated-browser">
+        <div class="outdated-message">
+            <h2 class="message-title">不支援 Internet Explore</h2>
+            <p class="message-description">CodiMD 使用較新的瀏覽器特性，因此無法於 Internet Explore 上使用，請改用下列瀏覽器</p>
+        </div>
+        <div class="outdated-browsers js-browsers">
+            <div class="browser chrome">
+            <h3>Google Chrome</h3>
+            <p><a href="https://www.google.com/chrome/" class="cta-primary">下載</a></p>
+            </div>
+            <div class="browser ff">
+            <h3>Mozilla Firefox</h3>
+            <p><a href="https://www.mozilla.org/firefox/" class="cta-primary">下載</a></p>
+            </div>
+            <div class="browser edge js-edge">
+            <h3>Microsoft Edge</h3>
+            <p><a href="https://www.microsoft.com/zh-tw/windows/microsoft-edge" class="cta-primary">下載</a></p>
+            </div>
+            <div class="browser safari js-safari">
+            <h3>Safari</h3>
+            <p><a href="https://support.apple.com/downloads/safari" class="cta-primary">下載</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
