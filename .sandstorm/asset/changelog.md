@@ -3,7 +3,7 @@
 - Rewrite description document
 
 # 0.0.5
-- Internet Explore user will alert message
+- Internet Explorer user will get alert message
 
 # 0.0.4
 - Hidden export list
@@ -11,11 +11,11 @@
   Open new window and pop up print dialog of browser
 - Default permission are `freely`
 
-    To using CodiMD default value `editable`, remove following line on `luncher.sh` and rebuild it
+    To using CodiMD default value `editable`, remove following line on `launcher.sh` and rebuild it
     ```
     export CMD_DEFAULT_PERMISSION=freely
     ```
-- Workaround: add `zh-tw` on i18n list for safari
+- Workaround: add `zh-tw` on i18n list for Safari
 
 # 0.0.3
 
@@ -46,7 +46,7 @@
   - Link of image upload (which upload to filesystem) will be relative path instead of uri
 - Add mode - single note per grain
   - In this mode, auto login by using `x-sandstorm-*` header
-  - To disable single note per grain(i.e. behavior as CodiMD default), remove following line on `luncher.sh`
+  - To disable single note per grain(i.e. behavior as CodiMD default), remove following line on `launcher.sh`
     ```
     export CMD_SINGLE_NOTE=true
     ```

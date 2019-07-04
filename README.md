@@ -21,14 +21,14 @@ More info: https://github.com/hackmdio/codimd
     - Otherwise, show note if note is exists or redirect 404 not found page
     - Remove `New` button
 
-        To disable single note per grain(i.e. behavior as CodiMD default), remove following line on `luncher.sh`
+        To disable single note per grain(i.e. behavior as CodiMD default), remove following line on `launcher.sh`
         ```
         export CMD_SINGLE_NOTE=true
         ```
 - Remove `Publish` button
 - Default permission are `freely`
 
-    To using CodiMD default value `editable`, remove following line on `luncher.sh` and rebuild it
+    To using CodiMD default value `editable`, remove following line on `launcher.sh` and rebuild it
     ```
     export CMD_DEFAULT_PERMISSION=freely
     ```
