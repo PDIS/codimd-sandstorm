@@ -1,3 +1,6 @@
+# 0.0.5
+- Internet Explore user will alert message
+
 # 0.0.4
 - Hidden export list
 - Add print mode
