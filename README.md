@@ -34,6 +34,7 @@ More info: https://github.com/hackmdio/codimd
     ```
 - Hidden export on menu
 - Add print mode
+- Unsupported on Internet Explore
 
 ## License
 
