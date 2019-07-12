@@ -1,3 +1,7 @@
+# 0.0.6
+- Upgrade dependency version
+- Rewrite description document
+
 # 0.0.5
 - Internet Explorer user will get alert message
 
