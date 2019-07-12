@@ -1,13 +1,13 @@
 CodiMD
 ===
 
-The CodiMD (`hackmd/codimd`) on Sandstorm, base on `hackmd/codimd#5606380`
+The CodiMD (`hackmdio/codimd`) on Sandstorm, base on `hackmdio/codimd#5606380`
 
 More information
 
 ## Feature
 
-The feature about CodiMD, please refer the [document](https://github.com/hackmdio/codimd/blob/master/public/docs/features.md) from `hackmd/codimd`
+The feature about CodiMD, please refer the [document](https://github.com/hackmdio/codimd/blob/master/public/docs/features.md) from `hackmdio/codimd`
 
 There are something different between this package and upstream
 

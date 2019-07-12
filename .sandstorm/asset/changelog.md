@@ -32,7 +32,7 @@
 
 # 0.0.1
 
-- Base on hackmd/codimd - #5606380
+- Base on hackmdio/codimd - #5606380
 - Dependency change
   - Using `winston-sandstorm` replace `winston` as an dependency
 
