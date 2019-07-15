@@ -39,6 +39,7 @@ innodb_autoextend_increment = 1
 EOF
 
 ## NODE package
+npm install -g npm@latest
 npm install -g node-gyp sequelize-cli
 
 # Install library which needed by node package
