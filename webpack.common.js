@@ -165,6 +165,19 @@ module.exports = {
         context: path.join(__dirname, 'node_modules/reveal.js'),
         from: 'plugin',
         to: 'reveal.js/plugin'
+      },
+      {
+        context: path.join(__dirname, 'node_modules/raphael'),
+        from: {
+          glob: 'raphael*',
+          dot: false
+        },
+        to: 'raphael'
+      },
+      {
+        context: path.join(__dirname, 'node_modules/@hackmd/js-sequence-diagrams'),
+        from: 'build',
+        to: 'js-sequence-diagrams'
       }
     ]),
     new MiniCssExtractPlugin()
@@ -255,7 +268,6 @@ module.exports = {
       'script-loader!codemirrorInlineAttachment',
       'script-loader!ot',
       'flowchart.js',
-      'script-loader!js-sequence-diagrams',
       'expose-loader?Viz!viz.js',
       'script-loader!abcjs',
       'expose-loader?io!socket.io-client',
@@ -265,7 +277,6 @@ module.exports = {
     pretty: [
       'babel-polyfill',
       'flowchart.js',
-      'script-loader!js-sequence-diagrams',
       'expose-loader?RevealMarkdown!reveal-markdown',
       path.join(__dirname, 'public/js/pretty.js')
     ],
@@ -290,7 +301,6 @@ module.exports = {
       'expose-loader?emojify!emojify.js',
       'script-loader!gist-embed',
       'flowchart.js',
-      'script-loader!js-sequence-diagrams',
       'expose-loader?Viz!viz.js',
       'script-loader!abcjs',
       'expose-loader?RevealMarkdown!reveal-markdown',
@@ -300,7 +310,6 @@ module.exports = {
       'babel-polyfill',
       'bootstrap-tooltip',
       'flowchart.js',
-      'script-loader!js-sequence-diagrams',
       'expose-loader?RevealMarkdown!reveal-markdown',
       path.join(__dirname, 'public/js/slide.js')
     ],
@@ -328,7 +337,6 @@ module.exports = {
       'expose-loader?emojify!emojify.js',
       'script-loader!gist-embed',
       'flowchart.js',
-      'script-loader!js-sequence-diagrams',
       'expose-loader?Viz!viz.js',
       'script-loader!abcjs',
       'headjs',
