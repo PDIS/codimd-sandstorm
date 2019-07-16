@@ -1,3 +1,23 @@
+# 0.1.0
+- Dependency replacement & upgrade
+	- Replace jsdom-nogyp => jsdom
+	- Upgrade lodash `~4.17.11` => `~4.17.13`
+		- In order to fix security vulnerabilities
+	- Remove `meta-marked`
+		- meta-marked has been replace by `@hackmd/meta-marked` on upstream
+	- Upgrade sequelize `5.3.5` => `~5.x`
+		- In order to fix security vulnerabilityies
+- Update `launcher.sh`
+	- Remove sql statement which unnecessary on `--skip-grant-tables` model
+- Rearrangement config of package
+	- Remove file which path be include in `alwaysInclude` from file.list
+	- Add `usr/lib/node_modules` into `alwaysInclude`
+- Fix typo
+	- Merge PR #2
+	- `hackmd/codimd` => `hackmdio/codimd`
+- Fix bug
+	- sequence diagrams broken when useCDN is disabled
+
 # 0.0.6
 - Upgrade dependency version
 - Rewrite description document
