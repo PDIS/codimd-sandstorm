@@ -1,3 +1,7 @@
+# 0.1.1
+- Fix bug
+	- Can not access note after click document on single note mode
+
 # 0.1.0
 - Dependency replacement & upgrade
 	- Replace jsdom-nogyp => jsdom

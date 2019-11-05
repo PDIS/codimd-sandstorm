@@ -19,7 +19,7 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "CodiMD"),
 
-    appVersion = 9,  # Increment this for every release.
+    appVersion = 10,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "0.1.0"),
     # Human-readable representation of appVersion. Should match the way you
