@@ -1,4 +1,4 @@
-# 0.1.1
+# 0.1.2
 - Fix bug
 	- Can not access note after click document on single note mode
 
