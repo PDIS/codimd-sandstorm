@@ -19,7 +19,7 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "CodiMD"),
 
-    appVersion = 15,  # Increment this for every release.
+    appVersion = 16,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "1.4.1"),
     # Human-readable representation of appVersion. Should match the way you
@@ -157,7 +157,7 @@ const pkgdef :Spk.PackageDefinition = (
   # `spk dev` will write a list of all the files your app uses to this file.
   # You should review it later, before shipping your app.
 
-  alwaysInclude = ["opt/app/public", "opt/app/node_modules", "usr/lib/node_modules/"],
+  alwaysInclude = ["opt/app/public", "opt/app/node_modules", "usr/lib/node_modules/", "opt/app/lib", "opt/app/locales", "opt/app/utils"],
   # Fill this list with more names of files or directories that should be
   # included in your package, even if not listed in sandstorm-files.list.
   # Use this to force-include stuff that you know you need but which may
