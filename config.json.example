@@ -130,6 +130,7 @@
         {
           "server": "https://www.plantuml.com/plantuml"
         },
-        "linkifyHeaderStyle": "gfm"
+        "linkifyHeaderStyle": "gfm",
+        "uploadsPath": "/var/codimd/uploads"
     }
 }
