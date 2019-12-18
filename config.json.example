@@ -23,7 +23,7 @@
         "hsts": {
             "enable": true,
             "maxAgeSeconds": 31536000,
-            "includeSubdomains": true,
+            "includeSubDomains": true,
             "preload": true
         },
         "csp": {
