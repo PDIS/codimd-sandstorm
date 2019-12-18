@@ -37,6 +37,8 @@ sequelize db:migrate
 # Run app
 export NODE_ENV=production
 export CMD_DOMAIN=$ROOT_URL
+export CMD_PROTOCOL_USESSL=false
+export CMD_URL_ADDPORT=false
 export CMD_USECDN=false
 export CMD_LOG_LEVEL=debug
 export CMD_PROTOCOL_USESSL=false
