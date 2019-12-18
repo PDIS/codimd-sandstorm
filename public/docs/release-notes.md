@@ -1,6 +1,57 @@
 Release Notes
 ===
 
+<i class="fa fa-tag"></i> 1.4.1 <i class="fa fa-clock-o"></i> 2019-12-13
+---
+
+[CodiMD 1.4.1](https://github.com/hackmdio/codimd/releases/tag/1.4.1) is a minor release including bug fixes introduced in 1.4.0 and earlier versions. We encourage everyone to upgrade to 1.4.1 now. Also, we're preparing for the next major release, and you can see how things are going on [GitHub](https://github.com/hackmdio/codimd/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc+milestone%3ANext). Stay tuned, and we hope you love it!
+
+### Fixes
+
+- Fix urlpath in webpack build
+- Fix mysql not bundled in package.json
+- Fix minio image uploading
+- Fix pcheck not parsed url correctly
+- Fix manage_users script
+
+### Enhancement
+
+- Added Scalingo compatible deployment
+
+[Check out the complete release note][v1_4_1]. Thank you CodiMD community and all our contributors. ❤️
+
+[v1_4_1]: https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv1_4_1
+
+<i class="fa fa-tag"></i> 1.4.0 Syrmaticus mikado <i class="fa fa-clock-o"></i> 2019-11-11
+---
+
+<div style="text-align: center; margin-bottom: 1em;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Mikado_Pheasant_398.jpg" width="300">
+<small style="display: block;">Mikado Pheasant, photo credits to <a href="https://zh.wikipedia.org/wiki/File:Mikado_Pheasant_398.jpg">Snowyowls from wikipedia</a></small>
+</div>
+
+Starting from version 1.4.0, we'll pick one species from [_the endemic species of Taiwan_](https://en.wikipedia.org/wiki/List_of_endemic_species_of_Taiwan) as version name. Is there anyone still remember we've once used type of coffee as our version name? It's time to revive that good convention, but this time we don't need coffee to stay up all night. 💤
+
+It has been over 200+ commits since our last release. These are the highlights from version 1.4.0:
+
+- [New table tools][table-tools] - Create table with auto-formatting and keyboard shortcut
+- [Markdownlint integration][markdownlint] - Lint you markdown document
+- [Support PlantUML, vega-lite renderer][more-renderers] - More renderers to come
+- [Support spoiler container, ruby markdown syntax][more-syntax]
+- [New Emoji sets][new-emoji]
+- [Slide mode plugins][slide-mode-plugins]: Elapsed time bar and Spotlight
+
+[Check out the complete release note][v1_4_0]. Thank you CodiMD community and all our contributors. ❤️
+
+[table-tools]: https://hackmd.io/@codimd/v1_4_0#New-Table-Tools
+[markdownlint]: https://hackmd.io/@codimd/v1_4_0#Markdownlint-integration
+[more-renderers]: https://hackmd.io/@codimd/v1_4_0#Support-2-new-render-engines-PlantUML-and-Vega-lite
+[more-syntax]: https://hackmd.io/@codimd/v1_4_0#Suppport-2-New-markdown-syntax-Spoiler-and-Ruby
+[new-emoji]: https://hackmd.io/@codimd/v1_4_0#New-emoji-sets
+[slide-mode-plugins]: https://hackmd.io/@codimd/v1_4_0#Slide-mode-enhancement
+
+[v1_4_0]: https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv1_4_0
+
 <i class="fa fa-tag"></i> 1.3.1 <i class="fa fa-clock-o"></i> 2019-03-23 00:00
 ---
 

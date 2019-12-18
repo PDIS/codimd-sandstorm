@@ -139,7 +139,7 @@ module.exports = {
         to: 'MathJax/'
       },
       {
-        context: path.join(__dirname, 'node_modules/emojify.js'),
+        context: path.join(__dirname, 'node_modules/@hackmd/emojify.js'),
         from: {
           glob: 'dist/**/*',
           dot: false
@@ -220,7 +220,7 @@ module.exports = {
       'script-loader!codemirrorInlineAttachment',
       'script-loader!ot',
       'flowchart.js',
-      'script-loader!js-sequence-diagrams',
+      'imports-loader?Raphael=raphael!js-sequence-diagrams',
       'expose-loader?RevealMarkdown!reveal-markdown',
       path.join(__dirname, 'public/js/index.js')
     ],
@@ -251,7 +251,6 @@ module.exports = {
     ],
     'index-pack': [
       'babel-polyfill',
-      'expose-loader?Spinner!spin.js',
       'script-loader!jquery-ui-resizable',
       'bootstrap-validator',
       'expose-loader?jsyaml!js-yaml',
@@ -259,7 +258,7 @@ module.exports = {
       'expose-loader?moment!moment',
       'script-loader!handlebars',
       'expose-loader?hljs!highlight.js',
-      'expose-loader?emojify!emojify.js',
+      'emojify.js',
       'script-loader!gist-embed',
       'script-loader!codemirror',
       'script-loader!inlineAttachment',
@@ -268,8 +267,13 @@ module.exports = {
       'script-loader!codemirrorInlineAttachment',
       'script-loader!ot',
       'flowchart.js',
-      'expose-loader?Viz!viz.js',
+      'imports-loader?Raphael=raphael!js-sequence-diagrams',
+      'script-loader!viz.js',
+      'script-loader!viz.render.js',
       'script-loader!abcjs',
+      'script-loader!vega',
+      'script-loader!vega-lite',
+      'script-loader!vega-embed',
       'expose-loader?io!socket.io-client',
       'expose-loader?RevealMarkdown!reveal-markdown',
       path.join(__dirname, 'public/js/index.js')
@@ -277,6 +281,7 @@ module.exports = {
     pretty: [
       'babel-polyfill',
       'flowchart.js',
+      'imports-loader?Raphael=raphael!js-sequence-diagrams',
       'expose-loader?RevealMarkdown!reveal-markdown',
       path.join(__dirname, 'public/js/pretty.js')
     ],
@@ -298,11 +303,16 @@ module.exports = {
       'expose-loader?moment!moment',
       'script-loader!handlebars',
       'expose-loader?hljs!highlight.js',
-      'expose-loader?emojify!emojify.js',
+      'emojify.js',
       'script-loader!gist-embed',
       'flowchart.js',
-      'expose-loader?Viz!viz.js',
+      'imports-loader?Raphael=raphael!js-sequence-diagrams',
+      'script-loader!viz.js',
+      'script-loader!viz.render.js',
       'script-loader!abcjs',
+      'script-loader!vega',
+      'script-loader!vega-lite',
+      'script-loader!vega-embed',
       'expose-loader?RevealMarkdown!reveal-markdown',
       path.join(__dirname, 'public/js/pretty.js')
     ],
@@ -310,6 +320,7 @@ module.exports = {
       'babel-polyfill',
       'bootstrap-tooltip',
       'flowchart.js',
+      'imports-loader?Raphael=raphael!js-sequence-diagrams',
       'expose-loader?RevealMarkdown!reveal-markdown',
       path.join(__dirname, 'public/js/slide.js')
     ],
@@ -334,11 +345,16 @@ module.exports = {
       'expose-loader?moment!moment',
       'script-loader!handlebars',
       'expose-loader?hljs!highlight.js',
-      'expose-loader?emojify!emojify.js',
+      'emojify.js',
       'script-loader!gist-embed',
       'flowchart.js',
-      'expose-loader?Viz!viz.js',
+      'imports-loader?Raphael=raphael!js-sequence-diagrams',
+      'script-loader!viz.js',
+      'script-loader!viz.render.js',
       'script-loader!abcjs',
+      'script-loader!vega',
+      'script-loader!vega-lite',
+      'script-loader!vega-embed',
       'headjs',
       'expose-loader?Reveal!reveal.js',
       'expose-loader?RevealMarkdown!reveal-markdown',
@@ -371,7 +387,15 @@ module.exports = {
       'reveal-markdown': path.join(__dirname, 'public/js/reveal-markdown.js'),
       abcjs: path.join(__dirname, 'public/vendor/abcjs_basic_3.1.1-min.js'),
       raphael: path.join(__dirname, 'node_modules/raphael/raphael.min.js'),
-      'js-sequence-diagrams': path.join(__dirname, 'node_modules/@hackmd/js-sequence-diagrams/build/main.js')
+      'js-sequence-diagrams': path.join(__dirname, 'node_modules/@hackmd/js-sequence-diagrams/build/main.js'),
+      vega: path.join(__dirname, 'node_modules/vega/build/vega.min.js'),
+      'vega-lite': path.join(__dirname, 'node_modules/vega-lite/build/vega-lite.min.js'),
+      'vega-embed': path.join(__dirname, 'node_modules/vega-embed/build/vega-embed.min.js'),
+      'emojify.js': path.join(__dirname, 'node_modules/@hackmd/emojify.js/dist/js/emojify-browser.min.js'),
+      'markdown-it': path.join(__dirname, 'node_modules/markdown-it/dist/markdown-it.js'),
+      'viz.js': path.join(__dirname, 'node_modules/viz.js/viz.js'),
+      'viz.render.js': path.join(__dirname, 'node_modules/viz.js/full.render.js'),
+      markdownlint: path.join(__dirname, 'node_modules/markdownlint/demo/markdownlint-browser.js')
     }
   },
 
@@ -387,6 +411,9 @@ module.exports = {
 
   module: {
     rules: [{
+      test: /\.mjs$/,
+      type: 'javascript/auto'
+    }, {
       test: /\.js$/,
       use: [{ loader: 'babel-loader' }],
       exclude: [/node_modules/, /public\/vendor/]
@@ -455,6 +482,11 @@ module.exports = {
       use: [{
         loader: 'url-loader',
         options: { limit: '10000', mimetype: 'image/gif' }
+      }]
+    }, {
+      test: /@hackmd\/codemirror\/addon\/lint\/lint/,
+      use: [{
+        loader: 'script-loader'
       }]
     }]
   },
