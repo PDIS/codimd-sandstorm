@@ -155,7 +155,6 @@ opt/app/locales/tr.json
 opt/app/locales/uk.json
 opt/app/locales/zh-CN.json
 opt/app/locales/zh-TW.json
-opt/app/locales/zh-tw.json
 opt/app/package.json
 opt/app/utils/string.js
 proc/cpuinfo
