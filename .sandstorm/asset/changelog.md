@@ -1,3 +1,6 @@
+# 1.4.1
+Merge 1.4.1 from upstream (hackmdio/codimd).
+
 # 0.1.2
 - Fix bug
 	- Can not access note after click document on single note mode
