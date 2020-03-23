@@ -45,4 +45,5 @@ export CMD_PROTOCOL_USESSL=false
 export CMD_SINGLE_NOTE=true
 export CMD_DISABLE_EXPORT=true
 export CMD_DEFAULT_PERMISSION=freely
+export CMD_ENABLE_ANONYMOUS_USER=true
 node app.js
