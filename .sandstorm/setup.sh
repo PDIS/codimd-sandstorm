@@ -8,18 +8,15 @@ set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 
-# Install MySQL && NodeJS && yarn
+# Install MySQL && NodeJS
 echo -e "deb http://repo.mysql.com/apt/debian/ stretch mysql-5.7\ndeb-src http://repo.mysql.com/apt/debian/ stretch mysql-5.7" > /etc/apt/sources.list.d/mysql.list
 wget -O /tmp/RPM-GPG-KEY-mysql https://repo.mysql.com/RPM-GPG-KEY-mysql
 apt-key add /tmp/RPM-GPG-KEY-mysql
 
 curl -sL https://deb.nodesource.com/setup_10.x | bash
 
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
 apt-get update
-apt-get install -y mysql-server nodejs yarn git
+apt-get install -y mysql-server nodejs git
 service mysql stop
 systemctl disable mysql
 # patch mysql conf to not change uid, and to use /var/tmp over /tmp
