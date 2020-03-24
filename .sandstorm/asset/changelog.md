@@ -1,3 +1,11 @@
+# 2.0.0
+
+Merge 2.0.0 from upstream (hackmdio/codimd).
+
+**New feature only on sandstorm version**
+- Using `Anonymous - (Date.ISOString)` as user display name and `x-sandstorm-tab-id` as user profile id to create user when user is not logged in sandstorm.
+  > To disable this feature, you need to modify `.sandstorm/launcher.sh`, set `CMD_ENABLE_ANONYMOUS_USER` to `false`
+
 # 1.4.1
 Merge 1.4.1 from upstream (hackmdio/codimd).
 
