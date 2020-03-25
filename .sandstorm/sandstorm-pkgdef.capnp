@@ -157,7 +157,14 @@ const pkgdef :Spk.PackageDefinition = (
   # `spk dev` will write a list of all the files your app uses to this file.
   # You should review it later, before shipping your app.
 
-  alwaysInclude = ["opt/app/public", "opt/app/node_modules", "usr/lib/node_modules/", "opt/app/lib", "opt/app/locales", "opt/app/utils"],
+  alwaysInclude = [
+    "opt/app/public", 
+    "usr/lib/node_modules/sequelize-cli", 
+    "opt/app/lib", 
+    "opt/app/locales", 
+    "opt/app/utils",
+    "opt/app/node_modules", 
+  ],
   # Fill this list with more names of files or directories that should be
   # included in your package, even if not listed in sandstorm-files.list.
   # Use this to force-include stuff that you know you need but which may
