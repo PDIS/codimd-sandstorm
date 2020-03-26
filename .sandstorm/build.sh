@@ -7,3 +7,5 @@ cd /opt/app/
 
 bash bin/setup
 npm run build
+
+npm prune --production
