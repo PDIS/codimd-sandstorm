@@ -1,6 +1,18 @@
+# 2.0.1
+
+Merge 2.0.1 from upstream (hackmdio/codimd).
+
+Check [release note](https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_0_1) to know more new new features.
+
+**Fix**
+
+- Show print dialog after markdown has been rendered. (Prevent empty content be printed.)
+
 # 2.0.0
 
 Merge 2.0.0 from upstream (hackmdio/codimd).
+
+Check [release note](https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_0_0) to know more new new features.
 
 **New feature only on sandstorm version**
 - Using `Anonymous - (Date.ISOString)` as user display name and `x-sandstorm-tab-id` as user profile id to create user when user is not logged in sandstorm.
