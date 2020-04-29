@@ -804,7 +804,9 @@ function changeMode (type) {
     case modeType.print:
       ui.area.edit.hide()
       ui.area.view.show()
-      window.print()
+      window.addEventListener('markdownRendered', function() {
+        window.print()
+      })
       break
   }
   // save mode to url
@@ -2842,7 +2844,11 @@ function updateDataAttrs (src, des) {
 
 function partialUpdate (src, tar, des) {
   if (!src || src.length === 0 || !tar || tar.length === 0 || !des || des.length === 0) {
-    ui.area.markdown.html(src)
+    debugger
+    ui.area.markdown.html(src).promise().then(function () {
+      var event = new CustomEvent('markdownRendered')
+      window.dispatchEvent(event)
+    })
     return
   }
   if (src.length === tar.length) { // same length
