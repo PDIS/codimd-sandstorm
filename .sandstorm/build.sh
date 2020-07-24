@@ -9,3 +9,4 @@ bash bin/setup
 npm run build
 
 npm prune --production
+npm install sqlite3

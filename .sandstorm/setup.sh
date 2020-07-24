@@ -16,24 +16,25 @@ apt-key add /tmp/RPM-GPG-KEY-mysql
 curl -sL https://deb.nodesource.com/setup_10.x | bash
 
 apt-get update
-apt-get install -y mysql-server nodejs git
-service mysql stop
-systemctl disable mysql
+# apt-get install -y mysql-server nodejs git
+apt-get install -y nodejs git
+# service mysql stop
+# systemctl disable mysql
 # patch mysql conf to not change uid, and to use /var/tmp over /tmp
 # for secure-file-priv see https://github.com/sandstorm-io/vagrant-spk/issues/195
-sed --in-place='' \
-        --expression='s/^user\t\t= mysql/#user\t\t= mysql/' \
-        --expression='s,^tmpdir\t\t= /tmp,tmpdir\t\t= /var/tmp,' \
-        --expression='/\[mysqld]/ a\ secure-file-priv = ""\' \
-        /etc/mysql/my.cnf
-# patch mysql conf to use smaller transaction logs to save disk space
-cat <<EOF > /etc/mysql/conf.d/sandstorm.cnf
-[mysqld]
-# Set the transaction log file to the minimum allowed size to save disk space.
-innodb_log_file_size = 1048576
-# Set the main data file to grow by 1MB at a time, rather than 8MB at a time.
-innodb_autoextend_increment = 1
-EOF
+# sed --in-place='' \
+#         --expression='s/^user\t\t= mysql/#user\t\t= mysql/' \
+#         --expression='s,^tmpdir\t\t= /tmp,tmpdir\t\t= /var/tmp,' \
+#         --expression='/\[mysqld]/ a\ secure-file-priv = ""\' \
+#         /etc/mysql/my.cnf
+# # patch mysql conf to use smaller transaction logs to save disk space
+# cat <<EOF > /etc/mysql/conf.d/sandstorm.cnf
+# [mysqld]
+# # Set the transaction log file to the minimum allowed size to save disk space.
+# innodb_log_file_size = 1048576
+# # Set the main data file to grow by 1MB at a time, rather than 8MB at a time.
+# innodb_autoextend_increment = 1
+# EOF
 
 ## NODE package
 npm install -g npm@latest
