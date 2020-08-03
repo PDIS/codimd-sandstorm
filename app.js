@@ -17,6 +17,7 @@ var passportSocketIo = require('passport.socketio')
 var helmet = require('helmet')
 var i18n = require('i18n')
 var flash = require('connect-flash')
+var apiMetrics = require('prometheus-api-metrics')
 
 // core
 var config = require('./lib/config')
@@ -55,6 +56,12 @@ function createHttpServer () {
 // server setup
 var app = express()
 var server = createHttpServer()
+
+// API and process monitoring with Prometheus for Node.js micro-service
+app.use(apiMetrics({
+  metricsPath: '/metrics/router',
+  excludeRoutes: ['/metrics/codimd']
+}))
 
 // logger
 app.use(morgan('combined', {
@@ -148,6 +155,7 @@ app.use('/', express.static(path.join(__dirname, '/public'), { maxAge: config.st
 app.use('/docs', express.static(path.resolve(__dirname, config.docsPath), { maxAge: config.staticCacheTime }))
 app.use('/uploads', express.static(path.resolve(__dirname, config.uploadsPath), { maxAge: config.staticCacheTime }))
 app.use('/default.md', express.static(path.resolve(__dirname, config.defaultNotePath), { maxAge: config.staticCacheTime }))
+app.use(require('./lib/metrics').router)
 
 // session
 app.use(session({
@@ -292,12 +300,18 @@ models.sequelize.sync().then(function () {
   } else {
     throw new Error('server still not ready after db synced')
   }
+}).catch(err => {
+  logger.error('Can\'t sync database')
+  logger.error(err.stack)
+  logger.error('Process will exit now.')
+  process.exit(1)
 })
 
 // log uncaught exception
 process.on('uncaughtException', function (err) {
   logger.error('An uncaught exception has occured.')
   logger.error(err)
+  console.error(err)
   logger.error('Process will exit now.')
   process.exit(1)
 })
