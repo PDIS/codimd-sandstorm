@@ -3,7 +3,7 @@ CodiMD-Sandstorm
 
 CodiMD on sandstorm
 
-base on hackmdio/codimd (2.0.0)
+base on hackmdio/codimd (2.2.0)
 
 More info: https://github.com/hackmdio/codimd
 

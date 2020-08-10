@@ -1,7 +1,7 @@
 CodiMD
 ===
 
-The CodiMD (`hackmdio/codimd`) on Sandstorm, base on `hackmdio/codimd@1.4.1`
+The CodiMD (`hackmdio/codimd`) on Sandstorm, base on `hackmdio/codimd@2.2.0`
 
 More information
 

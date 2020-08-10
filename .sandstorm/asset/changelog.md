@@ -1,3 +1,9 @@
+# 2.2.0
+
+Merge 2.2.0 and from upstream (hackmdio/codimd)
+
+Check [release note](https://hackmd.io/@codimd/v2_2_0) to know more new features.
+
 # 2.0.1
 
 Merge 2.0.1 from upstream (hackmdio/codimd).
