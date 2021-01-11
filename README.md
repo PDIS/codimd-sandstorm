@@ -3,7 +3,7 @@ CodiMD-Sandstorm
 
 CodiMD on sandstorm
 
-base on hackmdio/codimd (2.2.0)
+base on hackmdio/codimd (2.3.2)
 
 More info: https://github.com/hackmdio/codimd
 
@@ -40,6 +40,18 @@ More info: https://github.com/hackmdio/codimd
 - Unsupported on Internet Explore
 
 ## Changelog
+
+**2.3.2**
+
+Merge 2.3.2 from upstream (hackmdio/codimd).
+
+Check [release note](https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_3_0) to know more new new features.
+
+**2.2.0**
+
+Merge 2.2.0 from upstream (hackmdio/codimd).
+
+Check [release note](https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_2_0) to know more new new features.
 
 **2.0.1**
 
