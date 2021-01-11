@@ -179,7 +179,7 @@
     "pdfobject": "~2.1.1",
     "plantuml-encoder": "^1.2.5",
     "power-assert": "~1.6.1",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.21.0",
     "raphael": "~2.2.8",
     "reveal.js": "~3.9.2",
     "script-loader": "~0.7.2",
