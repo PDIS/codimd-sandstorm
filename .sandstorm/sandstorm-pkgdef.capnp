@@ -19,7 +19,7 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "CodiMD"),
 
-    appVersion = 21,  # Increment this for every release.
+    appVersion = 22,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "2.3.2"),
     # Human-readable representation of appVersion. Should match the way you
@@ -158,12 +158,12 @@ const pkgdef :Spk.PackageDefinition = (
   # You should review it later, before shipping your app.
 
   alwaysInclude = [
-    "opt/app/public", 
-    "usr/lib/node_modules/sequelize-cli", 
-    "opt/app/lib", 
-    "opt/app/locales", 
+    "opt/app/public",
+    "usr/lib/node_modules/sequelize-cli",
+    "opt/app/lib",
+    "opt/app/locales",
     "opt/app/utils",
-    "opt/app/node_modules", 
+    "opt/app/node_modules",
   ],
   # Fill this list with more names of files or directories that should be
   # included in your package, even if not listed in sandstorm-files.list.
