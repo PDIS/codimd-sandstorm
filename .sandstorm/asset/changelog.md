@@ -1,3 +1,17 @@
+**2.3.3**
+
+* c10cbb44 Update sandstorm script
+* 18882d42 Formatting coding style
+* cb538fda Update sandstorm package configuration
+* c6dcb10c Change behavior of print mode button
+* 5cb0b630 Revert "Remove publish button (unnecessary on sandstorm)"
+
+**2.3.2**
+
+Merge 2.3.2 from upstream (hackmdio/codimd).
+
+Check [release note](https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_3_0) to know more new new features.
+
 # 2.2.0
 
 Merge 2.2.0 and from upstream (hackmdio/codimd)
