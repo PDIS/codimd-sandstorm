@@ -814,7 +814,7 @@ function changeMode (type) {
     case modeType.print:
       ui.area.edit.hide()
       ui.area.view.show()
-      window.addEventListener('markdownRendered', function() {
+      window.addEventListener('markdownRendered', function () {
         window.print()
       })
       break
