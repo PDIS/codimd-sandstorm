@@ -36,7 +36,7 @@ innodb_autoextend_increment = 1
 EOF
 
 ## NODE package
-npm install -g node-gyp sequelize-cli yarn
+npm install -g node-gyp sequelize-cli
 
 # Install library which needed by node package
 apt-get install -y g++ libssl-dev

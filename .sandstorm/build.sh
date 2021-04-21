@@ -6,8 +6,7 @@ set -euo pipefail
 cd /opt/app/
 
 bash bin/setup
-yarn --version
 
-yarn run build
+npm run build
 
-yarn --production
+npm prune --production
