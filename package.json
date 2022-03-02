@@ -181,7 +181,7 @@
     "power-assert": "~1.6.1",
     "prismjs": "^1.17.1",
     "raphael": "~2.2.8",
-    "reveal.js": "~3.9.2",
+    "reveal.js": "~4.3.0",
     "script-loader": "~0.7.2",
     "select2": "~3.5.2-browserify",
     "sinon": "~7.3.2",
