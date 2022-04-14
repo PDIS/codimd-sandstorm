@@ -39,7 +39,7 @@
     "@hackmd/pandoc.js": "^0.1.9",
     "@passport-next/passport-openid": "~1.0.0",
     "archiver": "~3.1.1",
-    "async": "~3.1.0",
+    "async": "~3.2.2",
     "azure-storage": "~2.10.3",
     "babel-polyfill": "~6.26.0",
     "base64url": "~3.0.1",
